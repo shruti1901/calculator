@@ -133,6 +133,7 @@ class _ScanState extends State<Scan> {
                               ),
                               Padding(
                                   padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
+                                  
                               FlatButton(
                                 padding: EdgeInsets.all(10),
                                 onPressed: () {
@@ -161,13 +162,13 @@ class _ScanState extends State<Scan> {
 
   Future scan() async {
     _result =
-        await FlutterBarcodeScanner.scanBarcode('#004297', 'Cancel', true);
+        await FlutterBarcodeScanner.scanBarcode('#004297', 'Cancel', true,  );
+      
     setState(() {
       _value = _result;
     });
   }
 
-  
 
   
 }
